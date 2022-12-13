@@ -1,0 +1,43 @@
+{
+  "CN": "kubernetes",
+   "hosts": [
+   "127.0.0.1",
+   "10.0.1.20",
+   "10.0.1.21",
+   "10.0.1.22",
+   "10.0.1.30",
+   "10.0.1.31",
+   "10.0.1.32",
+   "ip-10-0-1-20",
+   "ip-10-0-1-21",
+   "ip-10-0-1-22",
+   "ip-10-0-1-30",
+   "ip-10-0-1-31",
+   "ip-10-0-1-32",
+   "ip-10-0-1-20.ec2.internal",
+   "ip-10-0-1-21.ec2.internal",
+   "ip-10-0-1-22.ec2.internal",
+   "ip-10-0-1-30.ec2.internal",
+   "ip-10-0-1-31.ec2.internal",
+   "ip-10-0-1-32.ec2.internal",
+   "MC-K8-NetworkLoadBalancer-2780e470873f78be.elb.us-east-1.amazonaws.com",
+   "kubernetes",
+   "kubernetes.default",
+   "kubernetes.default.svc",
+   "kubernetes.default.svc.cluster",
+   "kubernetes.default.svc.cluster.local"
+  ],
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "NG",
+      "L": "Lagos",
+      "O": "Acellware",
+      "OU": "Devops kubernetes",
+      "ST": "Lagos"
+    }
+  ]
+}
