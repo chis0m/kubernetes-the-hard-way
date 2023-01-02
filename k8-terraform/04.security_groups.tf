@@ -8,7 +8,7 @@ resource "aws_security_group" "sg" {
     from_port   = 2379
     to_port     = 2380
     protocol    = "tcp"
-    cidr_blocks = ["10.0.1.0/24"]
+    cidr_blocks = [var.subnet_cidr, var.cluster_cidr]
   }
 
   ingress {
@@ -16,7 +16,7 @@ resource "aws_security_group" "sg" {
     from_port   = 30000
     to_port     = 32767
     protocol    = "tcp"
-    cidr_blocks = ["10.0.1.0/24"]
+    cidr_blocks = [var.subnet_cidr, var.cluster_cidr]
   }
 
   ingress {

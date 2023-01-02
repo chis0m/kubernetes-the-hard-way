@@ -1,0 +1,16 @@
+  {
+    "CN": "system:node:ip-10-0-0-22",
+    "key": {
+      "algo": "rsa",
+      "size": 2048
+    },
+    "names": [
+      {
+        "C": "NG",
+        "L": "Lagos",
+        "O": "Acellware",
+        "OU": "Devops kubernetes",
+        "ST": "Lagos"
+      }
+    ]
+  }

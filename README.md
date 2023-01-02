@@ -10,29 +10,21 @@ the server is the k8 api-server while the client are all components that communi
 
 #### master
 ```bash
-cat > master-kubernetes-csr.json <<EOF
+cat > master/master-kubernetes-csr.json <<EOF
 {
   "CN": "kubernetes",
    "hosts": [
    "127.0.0.1",
-   "10.0.1.20",
-   "10.0.1.21",
-   "10.0.1.22",
-   "10.0.1.30",
-   "10.0.1.31",
-   "10.0.1.32",
-   "ip-10-0-1-20",
-   "ip-10-0-1-21",
-   "ip-10-0-1-22",
-   "ip-10-0-1-30",
-   "ip-10-0-1-31",
-   "ip-10-0-1-32",   
-   "ip-10-0-1-20.us-east-1.mc.compute.internal",
-   "ip-10-0-1-21.us-east-1.mc.compute.internal",
-   "ip-10-0-1-22.us-east-1.mc.compute.internal",
-   "ip-10-0-1-30.us-east-1.mc.compute.internal",
-   "ip-10-0-1-31.us-east-1.mc.compute.internal",
-   "ip-10-0-1-32.us-east-1.mc.compute.internal",   
+   "10.32.0.1",
+   "10.0.0.10",
+   "10.0.0.11",
+   "10.0.0.12",
+   "ip-10-0-0-10",
+   "ip-10-0-0-11",
+   "ip-10-0-0-12",
+   "ip-10-0-0-10.${DNSName}",
+   "ip-10-0-0-11.${DNSName}",
+   "ip-10-0-0-12.${DNSName}",
    "${KUBERNETES_PUBLIC_ADDRESS}",
    "kubernetes",
    "kubernetes.default",
@@ -57,10 +49,9 @@ cat > master-kubernetes-csr.json <<EOF
 EOF
 
 cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
+  -ca=ca/ca.pem \
+  -ca-key=ca/ca-key.pem \
+  -config=ca/ca-config.json \
   -profile=kubernetes \
-  master-kubernetes-csr.json | cfssljson -bare master-kubernetes
-}
+  master/master-kubernetes-csr.json | cfssljson -bare master/master-kubernetes
 ```

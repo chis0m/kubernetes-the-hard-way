@@ -1,3 +1,8 @@
+variable "infrastructure_name" {
+  type        = string
+  description = "The base name of this infrastructure"
+}
+
 variable "region" {
   type        = string
   description = "The Region were resources are to be hosted"
@@ -6,6 +11,16 @@ variable "region" {
 variable "vpc_cidr" {
   type        = string
   description = "VPC CIDR block"
+}
+
+variable "cluster_cidr" {
+  type        = string
+  description = "K8 cluster CIDR block"
+}
+
+variable "subnet_cidr" {
+  type        = string
+  description = "Subnet CIDR block"
 }
 
 variable "enable_dns_support" {

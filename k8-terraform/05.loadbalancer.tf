@@ -11,14 +11,14 @@ resource "aws_lb" "nlb" {
 
 
 resource "aws_lb_target_group" "tg" {
-  //  health_check {
-  //    interval            = 10
-  //    path                = "/"
-  //    protocol            = "HTTPS"
-  //    timeout             = 5
-  //    healthy_threshold   = 5
-  //    unhealthy_threshold = 2
-  //  }
+//  health_check {
+//    interval            = 10
+//    path                = "/healthz"
+//    protocol            = "HTTPS"
+//    timeout             = 5
+//    healthy_threshold   = 5
+//    unhealthy_threshold = 2
+//  }
   name        = "${local.base_name}-TargetGroup"
   port        = 6443
   protocol    = "TCP"
@@ -29,7 +29,7 @@ resource "aws_lb_target_group" "tg" {
 resource "aws_lb_target_group_attachment" "tg_attachment" {
   count            = 3
   target_group_arn = aws_lb_target_group.tg.arn
-  target_id        = "10.0.1.2${count.index}"
+  target_id        = "10.0.0.1${count.index}"
 }
 
 resource "aws_lb_listener" "listener" {

@@ -24,12 +24,12 @@ terraform {
 
 locals {
   tags = {
-    Project         = "MC-k8-GroundUp"
+    Project         = "${var.infrastructure_name}-GroundUp"
     Environment     = "Dev"
     Owner-Email     = "devops.chisom@gmail.com"
     Managed-By      = "Terraform"
     Billing-Account = "1234567890"
   }
-  base_name = "MC-K8"
+  base_name = var.infrastructure_name
 }
 
