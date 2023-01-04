@@ -12,7 +12,7 @@
    "ip-10-0-0-10.ec2.internal",
    "ip-10-0-0-11.ec2.internal",
    "ip-10-0-0-12.ec2.internal",
-   "MC-K8-NetworkLoadBalancer-1b31f3f74be6169e.elb.us-east-1.amazonaws.com",
+   "MC-K8-NetworkLoadBalancer-6575b47b159e74bd.elb.us-east-1.amazonaws.com",
    "kubernetes",
    "kubernetes.default",
    "kubernetes.default.svc",
@@ -27,7 +27,7 @@
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "Kubernetes",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }

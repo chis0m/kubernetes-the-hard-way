@@ -7,6 +7,8 @@ NAME=MC-K8
 
 ETCD_ENCRYPTION_KEY=$(head -c 32 /dev/urandom | base64)
 
+mkdir -p output/etcd
+
 cat > output/etcd/encryption-config.yaml <<EOF
 kind: EncryptionConfig
 apiVersion: v1

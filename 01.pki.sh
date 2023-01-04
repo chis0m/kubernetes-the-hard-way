@@ -51,7 +51,7 @@ EOF
 
 cat > ca/ca-csr.json <<EOF
 {
-  "CN": "kubernetes",
+  "CN": "Kubernetes",
   "key": {
     "algo": "rsa",
     "size": 2048
@@ -60,7 +60,7 @@ cat > ca/ca-csr.json <<EOF
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "Kubernetes",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }
@@ -105,7 +105,7 @@ cat > master/master-kubernetes-csr.json <<EOF
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "Kubernetes",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }
@@ -135,7 +135,7 @@ cat > scheduler/kube-scheduler-csr.json <<EOF
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "system:kube-scheduler",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }
@@ -166,7 +166,7 @@ cat > kubeproxy/kube-proxy-csr.json <<EOF
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "system:node-proxier",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }
@@ -197,7 +197,7 @@ cat > controller/kube-controller-manager-csr.json <<EOF
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "system:kube-controller-manager",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }
@@ -228,7 +228,7 @@ cat > admin/admin-csr.json <<EOF
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "system:masters",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }
@@ -258,7 +258,7 @@ cat > sa/service-account-csr.json <<EOF
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "Kubernetes",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }
@@ -293,7 +293,7 @@ for i in 0 1 2; do
       {
         "C": "NG",
         "L": "Lagos",
-        "O": "Acellware",
+        "O": "system:nodes",
         "OU": "Devops kubernetes",
         "ST": "Lagos"
       }

@@ -8,7 +8,7 @@
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "system:node-proxier",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }

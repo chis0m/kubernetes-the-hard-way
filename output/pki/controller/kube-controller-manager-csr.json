@@ -8,7 +8,7 @@
     {
       "C": "NG",
       "L": "Lagos",
-      "O": "Acellware",
+      "O": "system:kube-controller-manager",
       "OU": "Devops kubernetes",
       "ST": "Lagos"
     }

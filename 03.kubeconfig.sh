@@ -7,8 +7,6 @@ KUBERNETES_API_SERVER_ADDRESS=$(aws elbv2 describe-load-balancers \
 --names MC-K8-NetworkLoadBalancer \
 --output text --query 'LoadBalancers[].DNSName')
 
-#KUBERNETES_API_SERVER_ADDRESS=MC-K8-NetworkLoadBalancer-a0a93fac0dfc9247.elb.us-east-1.amazonaws.com
-
 # infrastructure base name
 NAME=MC-K8
 

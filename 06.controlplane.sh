@@ -59,13 +59,13 @@ instance="${NAME}-Cluster-Master-${i}" \
 done
 
 # Configure RBAC ClusterRole on one of the master nodes
-#for i in 0; do
-#  instance="${NAME}-Cluster-Master-${i}" \
-#  external_ip=$(aws ec2 describe-instances \
-#      --filters "Name=tag:Name,Values=${instance}" \
-#      --output text --query 'Reservations[].Instances[].PublicIpAddress')
-#  chmod +x config/controlplane/rbac.sh
-#  ssh -i ${SSH_KEY}  -o StrictHostKeyChecking=no ubuntu@${external_ip} "bash -s" < config/controlplane/rbac.sh
-#done
+for i in 0; do
+  instance="${NAME}-Cluster-Master-${i}" \
+  external_ip=$(aws ec2 describe-instances \
+      --filters "Name=tag:Name,Values=${instance}" \
+      --output text --query 'Reservations[].Instances[].PublicIpAddress')
+  chmod +x config/controlplane/rbac.sh
+  ssh -i ${SSH_KEY}  -o StrictHostKeyChecking=no ubuntu@${external_ip} "bash -s" < config/controlplane/rbac.sh
+done
 
 echo "\033[32m Control plane setup successful\033[0m"
