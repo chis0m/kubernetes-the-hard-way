@@ -10,4 +10,8 @@ sh 05.etcd.sh
 sh 06.controlplane.sh
 sh 07.worker.sh
 
+# set kubeconfig
+KUBECONFIG=$(pwd)/output/kubeconfig/admin.kubeconfig
+
+
 echo "\033[32m SETUP COMPLETED SUCCESSFULLY !!!\033[0m"
